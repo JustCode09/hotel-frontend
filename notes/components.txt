@@ -1,0 +1,37 @@
+COMPONENTS — Day 2
+
+WHAT IS A COMPONENT?
+A reusable block of UI
+Write once → use anywhere
+
+HOW TO CREATE:
+// Navbar.js
+function Navbar() {
+  return (
+    <nav>...</nav>
+  );
+}
+export default Navbar;
+
+HOW TO USE:
+// App.js
+import Navbar from './Navbar';
+
+function App() {
+  return (
+    <div>
+      <Navbar />   ← use like HTML tag
+    </div>
+  );
+}
+
+RULES:
+✅ Name MUST start with Capital letter
+✅ Must return ONE parent element
+✅ export default at bottom
+✅ import before using
+
+WHY CAPITAL?
+React tells difference between:
+lowercase → HTML tag (<div>)
+Capital   → React component (<Navbar />)
