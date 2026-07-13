@@ -1,0 +1,29 @@
+USESTATE — Day 4
+
+WHAT IS STATE?
+Data INSIDE a component that can change.
+When state changes → React auto-updates screen.
+
+SYNTAX:
+const [value, setValue] = useState(startingValue);
+
+value    → current value
+setValue → function to UPDATE value
+useState(0) → starting value
+
+EXAMPLE:
+const [count, setCount] = useState(0);
+const [liked, setLiked] = useState(false);
+
+HOW TO UPDATE:
+setCount(count + 1)  → add 1
+setCount(0)          → reset
+setLiked(!liked)     → flip true/false
+
+WHY NOT REGULAR VARIABLE?
+Regular variable → React doesn't know it changed
+useState          → React knows → updates screen ✅
+
+TERNARY IN JSX:
+{liked ? '❤️ Liked' : '🤍 Like'}
+condition ? ifTrue : ifFalse
